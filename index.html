@@ -122,7 +122,7 @@
     }
 
     .modal-body {
-        max-height: 375px;
+        max-height: 475px;
         overflow-y: scroll;
     }
 
@@ -152,12 +152,29 @@
         font-weight: 100 !important;
         color: #6c757d54 !important;
     }
+
+    .nav-tabs .nav-link {
+        color: black;
+    }
+
+    .w-max-450 {
+        max-width: 450px;
+    }
+
+    @media (max-width: 767px) {
+        .padding-top-bottom {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
 </style>
 
 <script>
     $('#myModal').on('shown.bs.modal', function() {
         $('#myInput').trigger('focus')
     })
+
 </script>
 
 
@@ -201,8 +218,8 @@
             <div class="carousel-item">
                 <img style="opacity: 0.8;" class="d-block w-100" src="assets/img/phone_girl.jpg" alt="Third slide">
             </div>
-            <div class="carousel-item">
-                <img style="opacity: 0.8;" class="d-block w-100" src="assets/img/team/mor.png" alt="Third slide">
+            <div class="carousel-item" style="background-color: white;">
+                <img style="opacity: 0.7;" class="d-block w-100" src="assets/img/team/mor.png" alt="Third slide">
             </div>
             <!--
             <div class="carousel-item">
@@ -263,15 +280,18 @@
                         <i class="far fa-comments fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="my-3">CHAT</h4>
-                    <p class="text-muted">chat with a doctor instantly</p>
+                    <p style="min-height: 57px;" class="text-muted">chat with a doctor instantly</p>
+                    <p> </p>
+                    <a style="color: white; max-width: 200px; margin-left: auto; margin-right: auto;" class="nav-link btn btn-primary get_started js-scroll-trigger  " data-toggle="modal" data-target=".modal-chat" href=""><i class="fas fa-book-reader"></i> step by step guide</a>
                 </div>
-                <div data-aos="fade-up" class="col-md-4">
+                <div data-aos="fade-up" class="col-md-4 padding-top-bottom">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-chalkboard-teacher fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="my-3">LEARN</h4>
                     <p class="text-muted">learn about your health conditions via articles and videos</p>
+                    <a style="color: white; max-width: 200px; margin-left: auto; margin-right: auto;" class="nav-link btn btn-primary get_started js-scroll-trigger  " data-toggle="modal" data-target=".modal-learn" href=""><i class="fas fa-book-reader"></i> step by step guide</a>
                 </div>
                 <div data-aos="fade-up" class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -280,6 +300,7 @@
                     </span>
                     <h4 class="my-3">BUY</h4>
                     <p class="text-muted">buy medicine, supplements and related healthcare products</p>
+                    <a style="color: white; max-width: 200px; margin-left: auto; margin-right: auto;" class="nav-link btn btn-primary get_started js-scroll-trigger  " data-toggle="modal" data-target=".modal-buy" href=""><i class="fas fa-book-reader"></i> step by step guide</a>
                 </div>
             </div>
         </div>
@@ -416,6 +437,162 @@
         </div>
     </footer>
     <!-- Portfolio Modals-->
+    <!-- chat Modal -->
+    <div class="modal fade modal-chat" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Chat step by step guide</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">IOS and Android app</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Browser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Phone browser app</a>
+                        </li>
+                    </ul><!-- Tab panes -->
+                    <div class="tab-content">
+                        <div style="text-align: center;" class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <p class="mt-5">1. Select the menu on the top left corner</p>
+                            <img style="" class="img-fluid" src="assets/img/step1phone.png" alt="" />
+                            <p class="mt-5">2. Select the chat option</p>
+                            <img style="" class="img-fluid" src="assets/img/step2phone.png" alt="" />
+                            <p class="mt-5">3. Select the chat icon</p>
+                            <img style="" class="img-fluid" src="assets/img/step3phone.png" alt="" />
+                            <p class="mt-5">4. Start chatting with a doctor</p>
+                            <img style="" class="img-fluid" src="assets/img/step4phone.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-2" role="tabpanel">
+                            <p class="mt-5">1. Select the chat icon on lower the left</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step1browser.png" alt="" />
+                            <p class="mt-5">2. Select start a new conversation</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step2browser.png" alt="" />
+                            <p class="mt-5">3. Start chatting with a doctor</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step3browser.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-3" role="tabpanel">
+                            <p class="mt-5">1. Select the chat icon on lower the left</p>
+                            <img style="" class="img-fluid" src="assets/img/step1browserf.png" alt="" />
+                            <p class="mt-5">2. Select start a new conversation</p>
+                            <img style="" class="img-fluid" src="assets/img/step2browserf.png" alt="" />
+                            <p class="mt-5">3. Start chatting with a doctor</p>
+                            <img style="" class="img-fluid" src="assets/img/step3browserf.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- learn modal -->
+    <div class="modal fade modal-learn" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Learn step by step guide</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-7" role="tab">IOS and Android app</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-8" role="tab">Browser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-9" role="tab">Phone browser app</a>
+                        </li>
+                    </ul><!-- Tab panes -->
+                    <div class="tab-content">
+                        <div style="text-align: center;" class="tab-pane active" id="tabs-7" role="tabpanel">
+                            <p class="mt-5">1. Select the menu on the top left corner</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step1phone.png" alt="" />
+                            <p class="mt-5">2. Select the learn option</p>
+                            <img style="" class="img-fluid" src="assets/img/step2phonelearn.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-8" role="tabpanel">
+                            <p class="mt-5">1. Select profile dropdown on the top corner</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step1browserlearn.png" alt="" />
+                            <p class="mt-5">2. Select the more option to view article titles</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step2browserlearn.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-9" role="tabpanel">
+                            <p class="mt-5">1. Select profile dropdown on the top corner</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step1browserlearn.png" alt="" />
+                            <p class="mt-5">2. Select the more option to view article titles</p>
+                            <img style="" class="img-fluid" src="assets/img/step2browserflearn.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Buy modal -->
+    <div class="modal fade modal-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Buy step by step guide</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-4" role="tab">IOS and Android app</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">Browser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">Phone browser app</a>
+                        </li>
+                    </ul><!-- Tab panes -->
+                    <div class="tab-content">
+                        <div style="text-align: center;" class="tab-pane active" id="tabs-4" role="tabpanel">
+                            <p class="mt-5">1. Select a store</p>
+                            <img style="" class="img-fluid" src="assets/img/step1phonebuy.png" alt="" />
+                            <p class="mt-5">2. Select a category</p>
+                            <img style="" class="img-fluid" src="assets/img/step2phonebuy.png" alt="" />
+                            <p class="mt-5">2. Using <i class="fas fa-plus-square"></i> add an item to your basket</p>
+                            <img style="" class="img-fluid" src="assets/img/step3phonebuyre.png" alt="" />
+                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <img style="" class="img-fluid" src="assets/img/step4phonebuy.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-5" role="tabpanel">
+                            <p class="mt-5">1. Select a store</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step1browserbuy.png" alt="" />
+                            <p class="mt-5">2. Using <i class="fas fa-plus-square"></i> add an item to your basket</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step2browserbuy.png" alt="" />
+                            <p class="mt-5">3. Select the checkout option</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step3browserbuy.png" alt="" />
+                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <img style="" class="img-fluid w-max-450" src="assets/img/step4browserbuy.png" alt="" />
+                        </div>
+                        <div style="text-align: center;" class="tab-pane" id="tabs-6" role="tabpanel">
+                            <p class="mt-5">1. Select a store</p>
+                            <img style="" class="img-fluid" src="assets/img/step1browserf.png" alt="" />
+                            <p class="mt-5">2. Using <i class="fas fa-plus-square"></i> add an item to your basket</p>
+                            <img style="" class="img-fluid" src="assets/img/step2browserfbuy.png" alt="" />
+                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <img style="" class="img-fluid" src="assets/img/step3browserfbuy.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Android Modal -->
     <div class="modal fade modal-android" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -529,4 +706,6 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-</body></html>
+</body>
+
+</html>
