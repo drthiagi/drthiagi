@@ -11125,7 +11125,7 @@ img::-moz-selection {
     width: 455px;
     top: 20vw;
     left: 8%;
-    background-color: white;
+    background-color: #ffffffb0;
     padding: 15px;
     border-radius: 15px;
 }
