@@ -11125,6 +11125,9 @@ img::-moz-selection {
     width: 455px;
     top: 20vw;
     left: 8%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .carousel-inner {
@@ -11149,6 +11152,8 @@ img::-moz-selection {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-transform: uppercase;
     text-shadow: 1px 1px #E47E10;
+    margin-bottom: 0px;
+    border-radius: 15px;
 }
 
 @media (min-width: 1200px) {
@@ -11590,4 +11595,37 @@ section#contact form#contactForm :-ms-input-placeholder {
 .margin-left-right-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 991px) {
+    .navbar-dark .navbar-nav .nav-link {
+        color: black !important;
+    }
+
+    .hidden-less-991 {
+        display: none;
+    }
+
+    .message-section-mobile h3.section-subheading {
+        margin-bottom: 1rem !important;
+    }
+
+    .message-section-mobile {
+        padding: 2rem 0 !important;
+    }
+
+    .message-section-mobile h2.section-heading {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 991px) {
+    .hidden-more-991 {
+        display: none;
+    }
+
 }

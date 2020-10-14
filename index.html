@@ -141,11 +141,7 @@
         color: black;
     }
 
-    @media (max-width: 991px) {
-        .navbar-dark .navbar-nav .nav-link {
-            color: black;
-        }
-    }
+
 
     .j-text {
         font-size: 0.7rem !important;
@@ -175,6 +171,28 @@
         $('#myInput').trigger('focus')
     })
 
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
 </script>
 
 
@@ -192,7 +210,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+                    <li class="nav-item"><a onclick="topFunction()" id="myBtn" class="nav-link" href="#home">home</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">how it works</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">about</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">the team</a></li>
@@ -209,8 +227,11 @@
             <div class="carousel-item active">
                 <img style="opacity: 0.8;" class="d-block w-100" src="assets/img/tired.jpg" alt="First slide">
             </div>
-            <div class="carousel-item">
-                <img style="opacity: 0.8;" class="d-block w-100" src="assets/img/phone_guy.jpg" alt="Third slide">
+            <div class="carousel-item" style="background-color: black;">
+                <img style="opacity: 0.87" class="d-block w-100" src="assets/img/my.jpeg" alt="Third slide">
+            </div>
+            <div class="carousel-item" style="background-color: black;">
+                <img style="opacity: 0.87" class="d-block w-100" src="assets/img/my2.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
                 <img style="opacity: 0.8; -webkit-transform: scaleX(-1); transform: scaleX(-1);" class="d-block w-100" src="assets/img/depressed_girl.jpg" alt="Second slide">
@@ -218,7 +239,7 @@
             <div class="carousel-item">
                 <img style="opacity: 0.8;" class="d-block w-100" src="assets/img/phone_girl.jpg" alt="Third slide">
             </div>
-            <div class="carousel-item" style="background-color: white;">
+            <div class="carousel-item" style="background-color: black;">
                 <img style="opacity: 0.7;" class="d-block w-100" src="assets/img/team/mor.png" alt="Third slide">
             </div>
             <!--
@@ -227,8 +248,8 @@
             </div>
 -->
 
-            <div class="masthead">
-                <h1 class="masthead-subheading">Using THETADADOC chat with a doctor, learn and buy your Medicines, health Supplements and products</h1>
+            <div class="masthead hidden-less-991">
+                <h1 class="masthead-subheading">Using THETADOC, you can <strong>CHAT</strong> with our Doctor, <strong>LEARN</strong> about Health issues and <strong>BUY</strong> Medicines, Supplements and Products</h1>
                 <h1 class="masthead-heading">towards a youthful and healthy future</h1>
             </div>
         </div>
@@ -242,6 +263,16 @@
         </a>
 
     </div>
+
+    <!-- Services-->
+    <section class="page-section message-section-mobile hidden-more-991" id="">
+        <div class="container">
+            <div class="text-center">
+                <h3 data-aos="fade-up" class="section-subheading text-muted">Using THETADOC, you can <strong>CHAT</strong> with our Doctor, <strong>LEARN</strong> about Health issues and <strong>BUY</strong> Medicines, Supplements and Products</h3>
+                <h2 data-aos="fade-up" class="section-heading text-uppercase">towards a youthful and healthy future</h2>
+            </div>
+        </div>
+    </section>
 
     <!-- Clients-->
 
@@ -567,7 +598,7 @@
                             <img style="" class="img-fluid" src="assets/img/step2phonebuy.png" alt="" />
                             <p class="mt-5">2. Using <i class="fas fa-plus-square"></i> add an item to your basket</p>
                             <img style="" class="img-fluid" src="assets/img/step3phonebuyre.png" alt="" />
-                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <p class="mt-5">3. Choose your delivery method and enter your address and proceed to payment</p>
                             <img style="" class="img-fluid" src="assets/img/step4phonebuy.png" alt="" />
                         </div>
                         <div style="text-align: center;" class="tab-pane" id="tabs-5" role="tabpanel">
@@ -577,7 +608,7 @@
                             <img style="" class="img-fluid w-max-450" src="assets/img/step2browserbuy.png" alt="" />
                             <p class="mt-5">3. Select the checkout option</p>
                             <img style="" class="img-fluid w-max-450" src="assets/img/step3browserbuy.png" alt="" />
-                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <p class="mt-5">3. Choose your delivery method and enter your address and proceed to payment</p>
                             <img style="" class="img-fluid w-max-450" src="assets/img/step4browserbuy.png" alt="" />
                         </div>
                         <div style="text-align: center;" class="tab-pane" id="tabs-6" role="tabpanel">
@@ -585,7 +616,7 @@
                             <img style="" class="img-fluid" src="assets/img/step1browserf.png" alt="" />
                             <p class="mt-5">2. Using <i class="fas fa-plus-square"></i> add an item to your basket</p>
                             <img style="" class="img-fluid" src="assets/img/step2browserfbuy.png" alt="" />
-                            <p class="mt-5">3. Choose your delivery method and entre your address and proceed to payment</p>
+                            <p class="mt-5">3. Choose your delivery method and enter your address and proceed to payment</p>
                             <img style="" class="img-fluid" src="assets/img/step3browserfbuy.png" alt="" />
                         </div>
                     </div>
